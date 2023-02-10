@@ -1,4 +1,4 @@
-# extract 1
+# extract 1 - compare similarities of words
 import spacy
 nlp = spacy.load('en_core_web_sm')
 
@@ -10,13 +10,13 @@ print(word1.similarity(word2))
 print(word3.similarity(word2))
 print(word3.similarity(word1))
 
-# extract 2
+# extract 2 - working with tokens
 tokens = nlp('cat apple monkey banana ')
 for token1 in tokens:
     for token2 in tokens:
         print(token1.text, token2.text, token1.similarity(token2))
 
-# extract 3
+# extract 3 - compare similarities of sentences
 sentence_to_compare = 'Why is my cat on the car'
 
 sentences = ['where did my dog go',
